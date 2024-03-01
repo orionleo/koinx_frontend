@@ -8,6 +8,6 @@ export async function GET(req: Request) {
         const data = res.data;
         return NextResponse.json(data);
     } catch (error) {
-        return Error("Server Error")
+        throw new Error("Server Error")
     }
 }
