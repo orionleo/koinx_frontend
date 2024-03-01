@@ -8,6 +8,8 @@ import Menu from './menu';
 import Performance from './performance';
 import Sentiments from './sentiments';
 import Information from './information';
+import Tokenomics from './tokenomics';
+import Team from './team';
 
 const MainPage = ({ coinId }: { coinId: string }) => {
     // const [coin, setCoin] = useState<CoinData>();
@@ -24,7 +26,7 @@ const MainPage = ({ coinId }: { coinId: string }) => {
     // }, [])
     return (
         <>
-            {coin && (<div className="md:w-2/3 w-full flex flex-col p-5">
+            {coin && (<div className="w-full flex flex-col p-5">
                 <div className="flex">
                     <p className="text-[#3E5765]">Cryptocurrencies{` >>>`}&nbsp;</p>
                     <p className="text-[#0F1629]">{coin.name}</p>
@@ -32,9 +34,13 @@ const MainPage = ({ coinId }: { coinId: string }) => {
                 <div className='w-full flex flex-col gap-y-5'>
                     <BasicInfo coin={coin} />
                     <Menu />
-                    <Performance coin={coin}  />
+                    <Performance coin={coin} />
                     <Sentiments />
                     <Information coin={coin} />
+                    <div className='hidden md:block'>
+                        <Tokenomics />
+                    </div>
+                    <Team />
                 </div>
             </div>)}
         </>

@@ -27,7 +27,7 @@ const ThreeTrendingCoins = () => {
         return () => clearInterval(intervalId);
     }, []);
     return (
-        <div className="flex flex-col space-y-4 justify-center text-black text-center items-center w-3/4 h-full py-10 bg-white rounded-[16px]">
+        <div className="flex flex-col space-y-4 justify-center text-black text-center items-center w-3/4 py-10 bg-white rounded-[16px]">
             <h2 className='text-[24px] font-semibold'>Trending Coins (24h)</h2>
             <div className="w-full px-4 gap-y-4 flex flex-col">
                 {trendingCoins.length === 3 && (

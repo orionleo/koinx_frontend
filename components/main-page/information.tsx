@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Info from "../svg/Info";
 import FundamentalsTable from "./fundamentals-table";
+import HoldingCoinFirst from "../svg/HoldingCoinFirst";
+import { Button } from "../ui/button";
+import RightArrow from "../svg/RightArrow";
 
 
 
@@ -40,12 +43,37 @@ const Information = ({ coin }: { coin: CoinData }) => {
             </div>
 
 
-            <div className="flex flex-col md:flex-row justify-start items-center gap-x-2">
-                <div>
-                <div className="bg-gradient-to-r from-[#79F1] to-[#1B4AEF]"></div>
-                <div></div>
+            <div className="flex flex-col gap-y-5 md:flex-row justify-start items-center gap-x-2 w-full">
+                <div className="flex rounded-[6.65px] w-full md:w-1/2 gap-x-5 p-5 justify-center items-center bg-gradient-to-r from-[#79F1A4] to-[#0E5CAD]">
+                    <div>
+                        <HoldingCoinFirst />
+                    </div>
+                    <div className="text-white text-[20px] flex flex-col justify-center items-center">
+                        <div>
+                            Calculate your profits
+                        </div>
+                        <Button className="bg-white text-black">
+                            Get Started for FREE <RightArrow />
+                        </Button>
+                    </div>
                 </div>
-                <div></div>
+                <div className="flex rounded-[6.65px] w-full md:w-1/2 gap-x-5 p-5 justify-center items-center bg-gradient-to-r from-[#FF9865] to-[#EF3031]">
+                    <div>
+                        <HoldingCoinFirst />
+                    </div>
+                    <div className="text-white text-[20px] flex flex-col justify-center items-center">
+                        <div>
+                            Calculate your tax liability
+                        </div>
+                        <Button className="bg-white text-black">
+                            Check now<RightArrow />
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            <Separator />
+            <div className="font-medium text-[16px] text-[#3E424A]">
+                Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa vel convallis duis ac. Mi adipiscing semper scelerisque porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper dui
             </div>
 
         </div >
