@@ -36,10 +36,8 @@ const ThreeTrendingCoins = () => {
                         return (
                             <div key={trendingCoin.item.coin_id} className='w-full flex justify-between items-center'>
                                 <div className='flex items-center text-left'>
-                                    <div>
-                                        <Image src={trendingCoin.item.small} alt="" width={24} height={24} />
-                                    </div>
-                                    <div className='ml-2'>{`${trendingCoin.item.name} (${trendingCoin.item.symbol.toUpperCase()})`}</div>
+                                    <Image src={trendingCoin.item.thumb} alt="" width={24} height={24} className='rounded-full' />
+                                    <div className='ml-2 text-wrap'>{`${trendingCoin.item.name} (${trendingCoin.item.symbol.toUpperCase()})`}</div>
                                 </div>
                                 <div className={`flex justify-evenly items-center w-[90px] text-[16px] font-medium ${isProfit ? "text-[#14B079] bg-[#EBF9F4]" : "text-red-600 bg-red-100"} p-2 rounded-[4px]`}>
                                     <div>
