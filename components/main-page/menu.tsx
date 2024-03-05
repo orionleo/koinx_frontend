@@ -30,13 +30,13 @@ const Menu = () => {
         setActive(item);
     }
     return (
-        <div className="w-full flex flex-col justify-start">
+        <div className="w-full flex flex-col justify-start overflow-scroll">
             <NavigationMenu className="w-full justify-start">
-                <NavigationMenuList className="w-full justify-start">
+                <NavigationMenuList className="w-full justify-start ">
                     {menuItems.map((item) => (
                         <NavigationMenuItem
                             key={item}
-                            className={`font-medium cursor-pointer text-[#3E424A] ${active === item ? "border-b-2 border-blue-500" : ""
+                            className={`font-medium cursor-pointer text-[16px] text-[#3E424A] ${active === item ? "border-b-2 border-blue-500" : ""
                                 }`}
                             onClick={() => handleClick(item)}
                         >
@@ -45,7 +45,7 @@ const Menu = () => {
                     ))}
                 </NavigationMenuList>
             </NavigationMenu>
-            <Separator className="mt-[-1px]"/>
+            <Separator className=" -translate-y-3 md:-translate-y-0"/>
         </div>
     )
 }

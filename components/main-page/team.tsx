@@ -1,18 +1,6 @@
-"use client";
-import { AllTimeStats, CoinData, MarketData, Stats, WeekStats, YearStats } from "@/constants/interfaces";
-import { Separator } from "../ui/separator";
-import ProgressBar from "./progress-bar";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Info from "../svg/Info";
-import FundamentalsTable from "./fundamentals-table";
-import HoldingCoinFirst from "../svg/HoldingCoinFirst";
-import { Button } from "../ui/button";
-import RightArrow from "../svg/RightArrow";
-import Donut from "../donut-chart/donut";
-
 import { Card, CardContent } from "@/components/ui/card"
-import TeamImage from "../svg/TeamImage";
+
+import Image from "next/image";
 
 
 
@@ -28,61 +16,58 @@ const Team = () => {
                 <div className="font-semibold text-[16px] text-[#3E424A]">Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium quam. Facilisis purus convallis quam augue.</div>
             </div>
             <div className="flex flex-col p-5 justify-start left-0 items-center w-full ">
-                <Card className="w-full flex-col space-y-5 flex justify-start">
-                    <CardContent className="w-full flex justify-start bg-[#E8F4FD]">
-                        <div className="w-full  p-5 rounded-[7.46px] justify-start flex ">
-                            <div className="w-full flex flex-col justify-center ">
+                <Card className="w-full flex-col gap-y-5 flex justify-start">
+                    <CardContent className="w-full rounded-[8px] flex md:flex-row flex-col justify-start bg-[#E8F4FD]">
+                        <div className="w-full md:flex-row flex-col justify-center items-cetner  p-5 rounded-[7.46px] md:justify-start flex ">
+                            <div className="w-full flex flex-col justify-center items-center ">
 
-                                <TeamImage />
-                                <div className="w-full justify-center items-center font-semibold text-[16px]">
+                                <Image src={"/image.png"} alt="profile pic" width={101} height={105} className="rounded-[8px]" />
+                                <div className="w-full text-center font-semibold text-[16px]">
                                     John Smith
                                 </div>
-                                <div className="w-full justify-start items-center font-medium text-[12px] text-[#788F9B]">
+                                <div className="w-full text-center font-medium text-[12px] text-[#788F9B]">
                                     Designation Here
                                 </div>
                             </div>
                             <div className="text-[14px]  text-[#0F1629] font-normal">
 
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum obcaecati rem est eveniet eius iusto omnis dignissimos debitis reiciendis totam doloremque, maiores, id voluptatem doloribus voluptates esse sapiente veniam vero.
-                                Itaque dolorum magni aperiam ab veritatis alias tempora asperiores animi excepturi? Magnam laudantium velit nihil, excepturi asperiores recusandae eveniet fugiat beatae dolorum odit molestiae laborum qui. Repudiandae consectetur id alias.
+                                Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque sed pellentesque viverra. Consectetur proin amet ut id facilisi quis consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est ipsum. Malesuada etiam mi gravida praesent interdu
                             </div>
                         </div>
                     </CardContent>
-                    <CardContent className="w-full flex justify-start bg-[#E8F4FD]">
-                        <div className="w-full  p-5 rounded-[7.46px] justify-start flex ">
-                            <div className="w-full flex flex-col justify-center ">
+                    <CardContent className="w-full rounded-[8px] flex md:flex-row flex-col justify-start bg-[#E8F4FD]">
+                        <div className="w-full md:flex-row flex-col justify-center items-cetner  p-5 rounded-[7.46px] md:justify-start flex ">
+                            <div className="w-full flex flex-col justify-center items-center ">
 
-                                <TeamImage />
-                                <div className="w-full justify-center items-center font-semibold text-[16px]">
+                                <Image src={"/image.png"} alt="profile pic" width={101} height={105} className="rounded-[8px]" />
+                                <div className="w-full text-center font-semibold text-[16px]">
                                     John Smith
                                 </div>
-                                <div className="w-full justify-start items-center font-medium text-[12px] text-[#788F9B]">
+                                <div className="w-full text-center font-medium text-[12px] text-[#788F9B]">
                                     Designation Here
                                 </div>
                             </div>
                             <div className="text-[14px]  text-[#0F1629] font-normal">
 
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum obcaecati rem est eveniet eius iusto omnis dignissimos debitis reiciendis totam doloremque, maiores, id voluptatem doloribus voluptates esse sapiente veniam vero.
-                                Itaque dolorum magni aperiam ab veritatis alias tempora asperiores animi excepturi? Magnam laudantium velit nihil, excepturi asperiores recusandae eveniet fugiat beatae dolorum odit molestiae laborum qui. Repudiandae consectetur id alias.
+                                Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque sed pellentesque viverra. Consectetur proin amet ut id facilisi quis consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est ipsum. Malesuada etiam mi gravida praesent interdu
                             </div>
                         </div>
                     </CardContent>
-                    <CardContent className="w-full flex justify-start bg-[#E8F4FD]">
-                        <div className="w-full  p-5 rounded-[7.46px] justify-start flex ">
-                            <div className="w-full flex flex-col justify-center ">
+                    <CardContent className="w-full rounded-[8px] flex md:flex-row flex-col justify-start bg-[#E8F4FD]">
+                        <div className="w-full md:flex-row flex-col justify-center items-cetner  p-5 rounded-[7.46px] md:justify-start flex ">
+                            <div className="w-full flex flex-col justify-center items-center ">
 
-                                <TeamImage />
-                                <div className="w-full justify-center items-center font-semibold text-[16px]">
+                                <Image src={"/image.png"} alt="profile pic" width={101} height={105} className="rounded-[8px]" />
+                                <div className="w-full text-center font-semibold text-[16px]">
                                     John Smith
                                 </div>
-                                <div className="w-full justify-start items-center font-medium text-[12px] text-[#788F9B]">
+                                <div className="w-full text-center font-medium text-[12px] text-[#788F9B]">
                                     Designation Here
                                 </div>
                             </div>
                             <div className="text-[14px]  text-[#0F1629] font-normal">
 
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum obcaecati rem est eveniet eius iusto omnis dignissimos debitis reiciendis totam doloremque, maiores, id voluptatem doloribus voluptates esse sapiente veniam vero.
-                                Itaque dolorum magni aperiam ab veritatis alias tempora asperiores animi excepturi? Magnam laudantium velit nihil, excepturi asperiores recusandae eveniet fugiat beatae dolorum odit molestiae laborum qui. Repudiandae consectetur id alias.
+                                Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque sed pellentesque viverra. Consectetur proin amet ut id facilisi quis consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est ipsum. Malesuada etiam mi gravida praesent interdu
                             </div>
                         </div>
                     </CardContent>

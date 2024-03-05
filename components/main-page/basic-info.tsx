@@ -29,11 +29,14 @@ const BasicInfo = ({ coin }: { coin: CoinData }) => {
                     </div>
                 </div>
                 <div className="text-[14px] font-medium text-[#768396]">
-                ₹ {coin.market_data.current_price["inr"]}
+                    ₹ {coin.market_data.current_price["inr"]}
                 </div>
             </div>
             <Separator />
             <div className="">
+                <div className="font-semibold text-[16px] mb-[10px]">
+                    Bitcoin Price Chart (USD)
+                </div>
                 <Chart coinSymbol={"eth"} />
             </div>
         </div>

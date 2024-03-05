@@ -5,17 +5,18 @@ interface ProgressBarProps {
     value: number;
     start: number;
     end: number;
+    type: "day" | "year";
 }
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ value, start, end }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({ value, start, end, type }) => {
     const arrowPosition = `${(value - start) / (end - start) * 100}%`;
     const arrowOffset = -1.5; // Adjust this value to lower or raise the arrow
 
     return (
         <div className="flex items-center w-full space-x-2">
-            <div className="w- flex items-center flex-col justify-center text-center">
+            <div className="text-xs md:text-[16px] flex items-center flex-col justify-center text-center">
                 <div>
-                    {"Today's Low"}
+                    {type==="day"?"Today's Low":"52W Low"}
                 </div>
                 <div>
                     {start.toFixed(2)}
@@ -31,9 +32,9 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ value, start, end }) => {
                 </div>
             </div>
 
-            <div className="w flex  items-center flex-col justify-start">
+            <div className=" text-xs md:text-[16px] flex  items-center flex-col justify-start">
                 <div>
-                    {"Today's High"}
+                {type==="day"?"Today's High":"52W High"}
                 </div>
                 <div>
                     {end.toFixed(2)}

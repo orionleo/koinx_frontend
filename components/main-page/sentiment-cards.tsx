@@ -22,41 +22,42 @@ export default function SentimentCards() {
             >
                 <CarouselContent className="w-full">
 
-                    <CarouselItem className="basis-[70%]">
+                    <CarouselItem className="basis-[80%]">
                         <div className="p-1">
-                            <Card>
-                                <CardContent className="flex bg-[#E8F4FD] gap-x-2  w-full aspect-square p-6">
+                            <Card className=" bg-[#E8F4FD] w-full rounded-[8px]">
+                                <CardContent className="flex bg-[#E8F4FD] gap-x-2 md:h-[204px] h-full w-full py-6 px-2">
+
                                     <div>
 
                                         <SentimentFirst />
                                     </div>
                                     <div className="flex flex-col">
-                                        <div className="font-medium text-[20px]">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</div>
+                                        <div className="font-medium md:text-[20px] text-[12px]">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</div>
 
-                                        <div className="text-[14px] font-normal">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</div>
+                                        <div className="md:text-[14px] text-[10px] font-normal">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </div>
                     </CarouselItem>
-                    <CarouselItem className="basis-[70%]">
+                    <CarouselItem className=" md:w-[456px] basis-[80%]">
                         <div className="p-1">
-                            <Card>
-                                <CardContent className="flex bg-[#EBF9F4] gap-x-2  w-full aspect-square p-6">
+                            <Card className="bg-[#EBF9F4] w-full rounded-[8px]">
+                                <CardContent className="flex bg-[#EBF9F4] gap-x-2 md:h-[204px] h-full w-full py-6 px-2">
                                     <div>
 
                                         <SentimentSecond />
                                     </div>
                                     <div className="flex flex-col">
-                                        <div className="font-medium text-[20px]">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</div>
+                                        <div className="font-medium md:text-[20px] text-[12px]">Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim mattis enim tincidunt.</div>
 
-                                        <div className="text-[14px] font-normal">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</div>
+                                        <div className="md:text-[14px] text-[10px] font-normal">Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est faucibus metus quis. Amet sapien quam viverra adipiscing condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae sit nisi viverra natoque lacinia libero enim.</div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </div>
                     </CarouselItem>
-                   
+
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />

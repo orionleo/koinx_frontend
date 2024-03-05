@@ -16,7 +16,7 @@ const Performance = ({ coin }: { coin: CoinData }) => {
 
 
     const [yearStats, setYearStats] = useState<YearStats>({
-        year_high: 61854.43844040557,
+        year_high: 70000.43844040557,
         year_low: 20195.2289502733
     })
     const [weekStats, setWeekStats] = useState<WeekStats>({
@@ -58,8 +58,8 @@ const Performance = ({ coin }: { coin: CoinData }) => {
                 <div className="font-semibold text-[24px]">Performance</div>
             </div>
 
-            <ProgressBar start={coin.market_data.low_24h["usd"]} end={coin.market_data.high_24h["usd"]} value={coin.market_data.current_price["usd"]} />
-            {(yearStats.year_high > 0) && <ProgressBar start={yearStats.year_low} end={yearStats.year_high} value={coin.market_data.current_price["usd"]} />}
+            <ProgressBar type="day" start={coin.market_data.low_24h["usd"]} end={coin.market_data.high_24h["usd"]} value={coin.market_data.current_price["usd"]} />
+            {(yearStats.year_high > 0) && <ProgressBar type="year" start={yearStats.year_low} end={yearStats.year_high} value={coin.market_data.current_price["usd"]} />}
             <div className="flex justify-start items-center gap-x-2">
                 <div className="font-medium text-[20px]">Fundamentals</div>
                 <Info />
