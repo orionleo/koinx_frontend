@@ -62,7 +62,7 @@ const Footer = () => {
                     <p className='text-[16px] text-left font-bold'>Company</p>
                     <p className='text-[15px] text-left font-normal'>Backed By</p>
                     <p className='text-[15px] text-left font-normal'>Media and Press</p>
-                    <div className='text-[15px] text-left font-normal start flex gap-x-2'>Careers <div className='bg-[#2997F9]/50 p-1'>{"We're Hiring"}</div> </div >
+                    <div className='text-[15px] text-left font-normal items-center start flex gap-x-2'>Careers <div className='bg-[#2997F9]/50 p-1'>{"We're Hiring"}</div> </div >
                     <p className='text-[15px] text-left font-normal'>Security</p>
                     <p className='text-[15px] text-left font-normal'>Refund Policy</p>
                     <p className='text-[15px] text-left font-normal'>Brand Assets</p>

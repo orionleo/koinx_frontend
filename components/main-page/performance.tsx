@@ -28,7 +28,7 @@ const Performance = ({ coin }: { coin: CoinData }) => {
         allTime_low: 67.809,
     })
 
-    const [stats,setStats] = useState<Stats>();
+    const [stats, setStats] = useState<Stats>();
 
     useEffect(() => {
         async function getData() {
@@ -65,7 +65,7 @@ const Performance = ({ coin }: { coin: CoinData }) => {
                 <Info />
             </div>
             <div>
-                {!loading&&stats!==undefined && globalData && <FundamentalsTable coin={coin} weekStats={weekStats}  allTimeStats={allTimeStats} marketData={globalData} stats={stats} />}
+                {!loading && stats !== undefined && globalData && <FundamentalsTable coin={coin} weekStats={weekStats} allTimeStats={allTimeStats} marketData={globalData} stats={stats} />}
             </div>
         </div >
 
