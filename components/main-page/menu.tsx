@@ -36,7 +36,7 @@ const Menu = () => {
                     {menuItems.map((item) => (
                         <NavigationMenuItem
                             key={item}
-                            className={`font-medium cursor-pointer text-[16px] text-[#3E424A] ${active === item ? "border-b-2 border-blue-500" : ""
+                            className={`font-medium cursor-pointer text-[16px] py-5 text-[#3E424A] ${active === item ? "border-b-2 border-blue-500" : ""
                                 }`}
                             onClick={() => handleClick(item)}
                         >

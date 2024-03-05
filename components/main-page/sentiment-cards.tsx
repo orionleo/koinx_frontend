@@ -25,7 +25,7 @@ export default function SentimentCards() {
                     <CarouselItem className="basis-[80%]">
                         <div className="p-1">
                             <Card className=" bg-[#E8F4FD] w-full rounded-[8px]">
-                                <CardContent className="flex bg-[#E8F4FD] gap-x-2 md:h-[204px] h-full w-full py-6 px-2">
+                                <CardContent className="flex rounded-[8px] bg-[#E8F4FD] gap-x-2 md:h-[204px] h-full w-full py-6 px-2">
 
                                     <div>
 
@@ -43,7 +43,7 @@ export default function SentimentCards() {
                     <CarouselItem className=" md:w-[456px] basis-[80%]">
                         <div className="p-1">
                             <Card className="bg-[#EBF9F4] w-full rounded-[8px]">
-                                <CardContent className="flex bg-[#EBF9F4] gap-x-2 md:h-[204px] h-full w-full py-6 px-2">
+                                <CardContent className="flex bg-[#EBF9F4] rounded-[8px] gap-x-2 md:h-[204px] h-full w-full py-6 px-2">
                                     <div>
 
                                         <SentimentSecond />

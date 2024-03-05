@@ -59,7 +59,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">24h Low / 24h High</TableCell>
                             <TableCell className="text-[14px] flex justify-end">{`$ ${coin.market_data.low_24h["usd"].toFixed
-                        (2)} / $ ${coin.market_data.high_24h["usd"].toFixed(2)}`}</TableCell>
+                                (2)} / $ ${coin.market_data.high_24h["usd"].toFixed(2)}`}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">7d Low / 7d High</TableCell>
@@ -76,7 +76,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                     </TableBody>
                 </Table>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full ">
                 <Table>
                     <TableBody>
                         <TableRow>
