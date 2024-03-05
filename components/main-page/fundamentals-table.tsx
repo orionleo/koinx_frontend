@@ -54,23 +54,24 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                     <TableBody>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">{coin.name} Price</TableCell>
-                            <TableCell className="text-[14px]">$ {coin.market_data.current_price["usd"]}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">$ {coin.market_data.current_price["usd"].toFixed(2)}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">24h Low / 24h High</TableCell>
-                            <TableCell className="text-[14px]">{`$ ${coin.market_data.low_24h["usd"]} / $ ${coin.market_data.high_24h["usd"]}`}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">{`$ ${coin.market_data.low_24h["usd"].toFixed
+                        (2)} / $ ${coin.market_data.high_24h["usd"].toFixed(2)}`}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">7d Low / 7d High</TableCell>
-                            <TableCell className="text-[14px]">{`$ ${weekStats.week_low.toFixed(2)} / $ ${weekStats.week_high.toFixed(2)}`}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">{`$ ${weekStats.week_low.toFixed(2)} / $ ${weekStats.week_high.toFixed(2)}`}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">Trading Volume</TableCell>
-                            <TableCell className="text-[14px]">{`$ ${coin.market_data.total_volume["usd"]}`}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">{`$ ${coin.market_data.total_volume["usd"]}`}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">Market Cap Rank</TableCell>
-                            <TableCell className="text-[14px]">{`#${coin.market_cap_rank}`}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">{`#${coin.market_cap_rank}`}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
@@ -81,7 +82,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">{coin.name} Market Cap
                             </TableCell>
-                            <TableCell className="text-[14px]">$ {coin.market_data.market_cap["usd"]}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">$ {coin.market_data.market_cap["usd"]}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">Market Cap Dominance</TableCell>
@@ -89,11 +90,11 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">Volume / Market Cap</TableCell>
-                            <TableCell className="text-[14px]">{`${stats.total_volume / stats.market_cap}`}</TableCell>
+                            <TableCell className="text-[14px] flex justify-end">{`${(stats.total_volume / stats.market_cap).toFixed(4)}`}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">All-Time High</TableCell>
-                            <TableCell className="text-[14px]">
+                            <TableCell className="text-[14px] flex justify-end">
                                 <div>
 
                                     <div className="flex gap-x-2">
@@ -113,7 +114,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">All-Time High</TableCell>
-                            <TableCell className="text-[14px]">
+                            <TableCell className="text-[14px] flex justify-end">
                                 <div>
 
                                     <div className="flex gap-x-2">
