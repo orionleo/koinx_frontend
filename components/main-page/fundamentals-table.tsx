@@ -22,13 +22,31 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
 
 
     const symbol = coin.symbol;
-    
+
     // console.log(marketData);
     // // Assuming market_cap_percentage has the type { btc: number; eth: number; usdt: number; ... }
     // const marketCapPercentages: { [key: string]: number } = marketData.data.market_cap_percentage;
 
     // // Use type assertion to tell TypeScript that symbol is a valid key
     // const percentage = marketCapPercentages[symbol] as number;
+    function formatDateString(inputDateString: string) {
+        const currentDate = new Date();
+        const inputDate = new Date(inputDateString);
+
+        // Calculate the difference in years
+        const yearDifference = currentDate.getUTCFullYear() - inputDate.getUTCFullYear();
+
+        // Format the date string
+        const formattedDateString = inputDate.toLocaleString('default', { month: 'short', day: 'numeric', year: 'numeric' });
+
+        return `${formattedDateString} (${yearDifference < 3 ? "about" : "over"} ${yearDifference} ${yearDifference === 1 ? 'year' : 'years'})`;
+    }
+
+    // Example usage
+    const inputDate = "2021-11-10T14:24:11.849Z";
+    const formattedDate = formatDateString(inputDate);
+    console.log(formattedDate);
+
     return (
         <div className="flex">
             <div className="w-1/2">
@@ -67,7 +85,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">Market Cap Dominance</TableCell>
-                            {/* <TableCell className="text-[14px]">{`${percentage}%`}</TableCell> */}
+                            {/* <TableCell className="text-[14px]">{`${marketData.data.market_cap_percentage["btc"]}%`}</TableCell> */}
                         </TableRow>
                         <TableRow>
                             <TableCell className="font-medium text-[14px] text-[#768396]">Volume / Market Cap</TableCell>
@@ -82,12 +100,12 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                                         <div>
                                             {`$${stats.ath}`}
                                         </div>
-                                        <div className={`${(coin.market_data.current_price["usd"] - stats.ath) <0?"text-red-600":"text-green-500"}`}>
+                                        <div className={`${(coin.market_data.current_price["usd"] - stats.ath) < 0 ? "text-red-600" : "text-green-500"}`}>
                                             {`${(((coin.market_data.current_price["usd"] - stats.ath) / stats.ath) * 100).toFixed(2)} %`}
                                         </div>
                                     </div>
                                     <div>
-                                        {stats.ath_date}
+                                        {formatDateString(stats.ath_date)}
                                     </div>
 
                                 </div>
@@ -102,18 +120,18 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                                         <div>
                                             {`$${stats.atl}`}
                                         </div>
-                                        <div className={`${(coin.market_data.current_price["usd"] - stats.atl) <0?"text-red-600":"text-green-500"}`}>
+                                        <div className={`${(coin.market_data.current_price["usd"] - stats.atl) < 0 ? "text-red-600" : "text-green-500"}`}>
                                             {`${(((coin.market_data.current_price["usd"] - stats.atl) / coin.market_data.current_price["usd"]) * 100).toFixed(2)} %`}
                                         </div>
                                     </div>
                                     <div>
-                                        {stats.atl_date}
+                                        {formatDateString(stats.atl_date)}
                                     </div>
 
                                 </div>
                             </TableCell>
                         </TableRow>
-                      
+
                     </TableBody>
                 </Table>
             </div>
