@@ -3,15 +3,6 @@ import LogoFooter from '../svg/LogoFooter'
 import Socials from '../svg/Socials'
 import { Separator } from '../ui/separator'
 
-import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table"
 import Uk from '../svg/Uk'
 import India from '../svg/India'
 

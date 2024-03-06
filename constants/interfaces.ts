@@ -328,3 +328,9 @@ export interface MarketData {
         updated_at: number;
     };
 }  
+
+export interface Stats{
+    weekStats:WeekStats;
+    yearStats:YearStats;
+    
+}

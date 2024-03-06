@@ -1,8 +1,6 @@
 "use client";
 import { AllTimeStats, CoinData, MarketData, Stats, WeekStats, YearStats } from "@/constants/interfaces";
 import { Separator } from "../ui/separator";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import Info from "../svg/Info";
 import FundamentalsTable from "./fundamentals-table";
 import HoldingCoinFirst from "../svg/HoldingCoinFirst";

@@ -8,6 +8,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { AllTimeStats, CoinData, MarketData, Stats, WeekStats } from "@/constants/interfaces"
+import { Separator } from "@radix-ui/react-separator";
 import { stat } from "fs";
 
 interface FundamentalsTableProps {
@@ -23,7 +24,6 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
 
     const symbol = coin.symbol;
 
-    // console.log(marketData);
     // // Assuming market_cap_percentage has the type { btc: number; eth: number; usdt: number; ... }
     // const marketCapPercentages: { [key: string]: number } = marketData.data.market_cap_percentage;
 
@@ -42,13 +42,8 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
         return `${formattedDateString} (${yearDifference < 3 ? "about" : "over"} ${yearDifference} ${yearDifference === 1 ? 'year' : 'years'})`;
     }
 
-    // Example usage
-    const inputDate = "2021-11-10T14:24:11.849Z";
-    const formattedDate = formatDateString(inputDate);
-    console.log(formattedDate);
-
     return (
-        <div className="flex md:flex-row flex-col">
+        <div className="flex md:flex-row flex-col md:space-x-10">
             <div className="md:w-1/2 w-full">
                 <Table className="text-[14px]">
                     <TableBody>
@@ -79,6 +74,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                     </TableBody>
                 </Table>
             </div>
+            <div className="md:hidden block bg-[#DEE2E6] h-[1px]" />
             <div className="md:w-1/2 w-full text-[10px]">
                 <Table className="text-[14px] w-full">
                     <TableBody>
@@ -97,8 +93,8 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                             <TableCell className="px-0  flex justify-end">{`${(stats.total_volume / stats.market_cap).toFixed(4)}`}</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell className="px-0 font-medium  text-[#768396]">All-Time High</TableCell>
-                            <TableCell className="px-0  flex w-full justify-end">
+                            <TableCell className="px-0 md:py-2 font-medium  text-[#768396]">All-Time High</TableCell>
+                            <TableCell className="px-0 md:py-2  flex w-full justify-end">
                                 <div className="flex flex-col w-full justify-end px-0">
 
                                     <div className="flex w-full justify-end gap-x-1 px-0">
@@ -109,7 +105,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                                             {`${(((coin.market_data.current_price["usd"] - stats.ath) / stats.ath) * 100).toFixed(2)} %`}
                                         </div>
                                     </div>
-                                    <div className="text-[11px] flex justify-end w-full px-0">
+                                    <div className="text-[11px] w-full px-0">
                                         {formatDateString(stats.ath_date)}
                                     </div>
 
@@ -117,8 +113,8 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                             </TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell className="px-0 font-medium  text-[#768396] pr-0">All-Time Low</TableCell>
-                            <TableCell className="px-0  flex justify-end">
+                            <TableCell className="px-0 md:py-2 font-medium  text-[#768396] pr-0">All-Time Low</TableCell>
+                            <TableCell className="px-0 md:py-2 flex justify-end">
                                 <div className="flex flex-col w-full justify-end px-0">
 
                                     <div className="flex w-full justify-end gap-x-2">
@@ -129,7 +125,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                                             {`${(((coin.market_data.current_price["usd"] - stats.atl) / coin.market_data.current_price["usd"]) * 100).toFixed(2)} %`}
                                         </div>
                                     </div>
-                                    <div className="text-[11px] justify-end flex w-full px-0">
+                                    <div className="text-[11px] flex w-full px-0">
                                         {formatDateString(stats.atl_date)}
                                     </div>
 

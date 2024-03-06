@@ -29,7 +29,6 @@ const TrendingCoins = () => {
 
         return () => clearInterval(intervalId);
     }, []);
-    // console.log(trendingCoins[0].item.data.sparkline);
     const filteredTrendingCoins = trendingCoins.filter((trendingCoin) => {
         const price_usd = Number(trendingCoin.item.data.price.slice(1)).toFixed(2);
         return price_usd !== "NaN"
@@ -56,9 +55,9 @@ const TrendingCoins = () => {
                                     <div className="py-1">
                                         <Card className="shadow-sm px-0 border rounded-lg md:h-[160px] h-[80px]">
                                             <CardContent className="flex flex-col px-0 ">
-                                                <div className="flex justify-center px-0 w-full md:py-3 pt-3 md:space-x-1 space-x-[2px] ">
+                                                <div className="flex md:justify-start md:px-3 justify-center px-0 w-full md:py-3 pt-3 md:space-x-1 space-x-[2px] ">
                                                     <div className="">
-                                                        <Image src={trendingCoin.item.thumb} alt="Coin thumbnail" width={2} height={2} className="rounded-full md:w-[26px] md:h-[26px] w-[16px] h-[16px]" />
+                                                        <Image src={trendingCoin.item.thumb} alt="Coin thumbnail" width={26} height={26} className="rounded-full md:w-[26px] md:h-[26px] w-[16px] h-[16px]" />
                                                     </div>
                                                     <div className="md:text-[16px] flex justify-center items-center text-[12px] ">
                                                         {trendingCoin.item.symbol}
@@ -71,7 +70,7 @@ const TrendingCoins = () => {
                                                     {`$ ${price_usd}`}
 
                                                 </div>
-                                                <div><Image width={140} height={58} src={trendingCoin.item.data.sparkline} alt="Coin thumbnail" className="h-[36px] px-2 w-full  md:w-[140px] md:h-[58px] pb-4 mt-0" /></div>
+                                                <div className="flex justify-center items-center"><Image width={140} height={58} src={trendingCoin.item.data.sparkline} alt="Coin thumbnail" className="h-[36px] px-2 w-full  md:w-[140px] md:h-[58px] pb-4 mt-0" /></div>
                                             </CardContent>
                                         </Card>
                                     </div>
@@ -102,9 +101,9 @@ const TrendingCoins = () => {
                                     <div className="py-1">
                                         <Card className="shadow-sm px-0 border rounded-lg md:h-[160px] h-[80px]">
                                             <CardContent className="flex flex-col px-0 ">
-                                                <div className="flex justify-center px-0 w-full md:py-3 pt-3 md:space-x-1 space-x-[2px] ">
+                                                <div className="flex md:justify-start md:px-3 justify-center px-0 w-full md:py-3 pt-3 md:space-x-1 space-x-[2px] ">
                                                     <div className="">
-                                                        <Image src={trendingCoin.item.thumb} alt="Coin thumbnail" width={2} height={2} className="rounded-full md:w-[26px] md:h-[26px] w-[16px] h-[16px]" />
+                                                        <Image src={trendingCoin.item.thumb} alt="Coin thumbnail" width={26} height={26} className="rounded-full md:w-[26px] md:h-[26px] w-[16px] h-[16px]" />
                                                     </div>
                                                     <div className="md:text-[16px] flex justify-center items-center text-[12px] ">
                                                         {trendingCoin.item.symbol}
@@ -117,7 +116,7 @@ const TrendingCoins = () => {
                                                     {`$ ${price_usd}`}
 
                                                 </div>
-                                                <div><Image width={140} height={58} src={trendingCoin.item.data.sparkline} alt="Coin thumbnail" className="h-[36px] px-2 w-full  md:w-[140px] md:h-[58px] pb-4 mt-0" /></div>
+                                                <div className="flex justify-center items-center"><Image width={140} height={58} src={trendingCoin.item.data.sparkline} alt="Coin thumbnail" className="h-[36px] px-2 w-full  md:w-[140px] md:h-[58px] pb-4 mt-0" /></div>
                                             </CardContent>
                                         </Card>
                                     </div>
