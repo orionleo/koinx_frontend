@@ -86,7 +86,7 @@ const FundamentalsTable = ({ coin, weekStats, allTimeStats, marketData, stats }:
                         </TableRow>
                         <TableRow className="w-full px-0">
                             <TableCell className="px-0 font-medium text-[#768396]">Market Cap Dominance</TableCell>
-                            {/* <TableCell className="">{`${px-0 marketData.data.market_cap_percentage["btc"]}%`}</TableCell> */}
+                            <TableCell className="px-0 flex justify-end">{`${83}%`}</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell className="px-0 font-medium  text-[#768396]">Volume / Market Cap</TableCell>
