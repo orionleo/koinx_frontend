@@ -24,7 +24,7 @@ const BasicInfo = ({ coin }: { coin: CoinData }) => {
                         <ProfitLossArrow profit={isProfit} />
                         {`${coin.market_data.price_change_percentage_24h.toFixed(2)}%`}
                     </div>
-                    <div className="font-medium">
+                    <div className="font-medium text-[#768396] text-[14px]">
                         {"(24H)"}
                     </div>
                 </div>
