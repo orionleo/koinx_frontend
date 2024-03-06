@@ -44,15 +44,15 @@ const Information = ({ coin }: { coin: CoinData }) => {
 
             <div className="flex flex-col gap-y-5 md:flex-row justify-start items-center gap-x-2 w-full">
                 <div className="flex rounded-[6.65px] w-full md:w-1/2 gap-x-5 p-5 justify-center items-center bg-gradient-to-r from-[#79F1A4] to-[#0E5CAD]">
-                    <div>
+                    <div className="w-1/2">
                         <HoldingCoinFirst />
                     </div>
-                    <div className="text-white text-[20px] flex flex-col justify-center items-center">
+                    <div className="text-white w-1/2 text-[20px] flex flex-col justify-center items-center">
                         <div>
                             Calculate your profits
                         </div>
-                        <Button className="bg-white text-black">
-                            Get Started for FREE <RightArrow />
+                        <Button className="bg-white text-[14px] text-black">
+                            Check now <RightArrow />
                         </Button>
                     </div>
                 </div>
@@ -64,8 +64,8 @@ const Information = ({ coin }: { coin: CoinData }) => {
                         <div>
                             Calculate your tax liability
                         </div>
-                        <Button className="bg-white text-black">
-                            Check now<RightArrow />
+                        <Button className="bg-white text-[14px] text-black">
+                            Check now <RightArrow />
                         </Button>
                     </div>
                 </div>
