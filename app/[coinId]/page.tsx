@@ -25,7 +25,7 @@ function CoinId({ params }: { params: { coinId: string } }) {
             <div className="bg-white w-full">
                 <TrendingCoins />
             </div>
-            <div className="w-full flex justify-center items-center md:hidden">
+            <div className="w-full flex justify-center bg-white items-center md:hidden">
                 <Sidebar />
             </div>
         </div>
