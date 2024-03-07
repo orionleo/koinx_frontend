@@ -27,7 +27,7 @@ const ThreeTrendingCoins = () => {
         return () => clearInterval(intervalId);
     }, []);
     return (
-        <div className="flex flex-col space-y-4 justify-center text-black text-center items-center md:w-3/4 w-full py-10 bg-white rounded-[16px]">
+        <div className="flex px-5 md:px-0 flex-col space-y-4 justify-center text-black text-center items-center md:w-3/4 w-full py-10 bg-white rounded-[16px]">
             <h2 className='text-[24px] font-semibold'>Trending Coins (24h)</h2>
             <div className="w-full px-0 md:px-4 gap-y-4 flex flex-col">
                 {trendingCoins.length === 3 && (
@@ -39,11 +39,11 @@ const ThreeTrendingCoins = () => {
                                     <Image src={trendingCoin.item.thumb} alt="" width={24} height={24} className='rounded-full' />
                                     <div className='ml-2 text-wrap'>{`${trendingCoin.item.name} (${trendingCoin.item.symbol.toUpperCase()})`}</div>
                                 </div>
-                                <div className={`flex justify-evenly items-center w-[90px] text-[16px] font-medium ${isProfit ? "text-[#14B079] bg-[#EBF9F4]" : "text-red-600 bg-red-100"} p-2 rounded-[4px]`}>
-                                    <div>
+                                <div className={`flex justify-evenly md:w-[90px] text-[16px] items-center w-[84px] px-8 space-x-2 font-medium ${isProfit ? "text-[#14B079] bg-[#EBF9F4]" : "text-red-600 bg-red-100"} py-1 rounded-[4px]`}>
+                                    <div className=''>
                                         <ProfitLossArrow profit={isProfit} />
                                     </div>
-                                    <div>
+                                    <div className=''>
                                         {`${trendingCoin.item.data.price_change_percentage_24h["usd"].toFixed(2)}%`}
                                     </div>
                                 </div>

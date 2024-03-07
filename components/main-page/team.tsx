@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 
 import Image from "next/image";
+import TrendingCoins from "../trending-coins/trending-coints";
 
 
 
@@ -73,7 +74,9 @@ const Team = () => {
                     </CardContent>
                 </Card>
             </div>
-
+            <div className="md:hidden flex">
+                <TrendingCoins />
+            </div>
         </div >
 
     )

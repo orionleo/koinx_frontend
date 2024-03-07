@@ -5,7 +5,9 @@ import ThreeTrendingCoins from './three-trending-coins'
 const Sidebar = () => {
     return (
         <div className="w-full space-y-10 flex-col flex justify-center md:justify-start items-center">
-            <GetStarted />
+            <div className='md:p-0 p-5'>
+                <GetStarted />
+            </div>
             <ThreeTrendingCoins />
         </div>
     )

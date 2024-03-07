@@ -4,7 +4,7 @@ import { Button } from "../ui/button"
 
 const GetStarted = () => {
     return (
-        <div className=" w-full flex flex-col space-y-4 justify-center text-white text-center items-center md:w-3/4   py-10 bg-[#0052FE] rounded-[16px]">
+        <div className=" w-full flex flex-col space-y-4 justify-center text-white text-center items-center md:w-3/4 md:px-0 p-5   py-10 bg-[#0052FE] rounded-[16px]">
             <div className="md:hidden flex">
                 <Portal />
             </div>
